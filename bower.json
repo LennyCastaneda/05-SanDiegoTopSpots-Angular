@@ -1,0 +1,17 @@
+{
+  "name": "05-SanDiegoTopSpots-Angular",
+  "main": "index.html",
+  "authors": [
+    "Lenny Castaneda <lenny.castaneda@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
