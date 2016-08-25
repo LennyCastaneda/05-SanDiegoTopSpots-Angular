@@ -18,7 +18,7 @@
 
         ////////////////
 
-        function getTopSpots(spot) {
+        function getTopSpots() {
             var defer = $q.defer();
             var topSpots = this; //jshint ignore:line 
 
@@ -39,6 +39,29 @@
             // This defer promise variable runs before the .success callback function.
             return defer.promise;
         }
+
+        ////////////////
+
+        function postTopSpots(topspot) {
+            var defer = $q.defer();
+            var topSpots = this; //jshint ignore:line 
+
+            // Use $http.get function passing two arguments, the API URL & object post 'topspot' which gets sent with the body in the http request.
+            $http.post('http://localhost:58865/api/topspots', topspot)
+                // Use .success callback function to that gets the JSON object back as its first argument
+                .then(function(response) {
+                        defer.resolve(response.data);
+                        topSpots = response.data;                       
+                    },
+                    function(error) {
+                        defer.reject(error);
+                        //  Do some error handling here
+                        alert('There was a problem with the http server. Please check your file and try again.');
+                    }
+                );
+            // This defer promise variable runs before the .success callback function.
+            return defer.promise;
+        }        
     }
 
 })();
