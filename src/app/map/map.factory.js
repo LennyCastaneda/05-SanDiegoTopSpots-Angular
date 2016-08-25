@@ -12,7 +12,7 @@ function initMap() {
   });
 
   //Accessing the topspot.json file and creating a function.
-  $.getJSON("topspots.json",function(tableList) {
+  $.getJSON("http://localhost:58865/api/topspots",function(tableList) {
   //Get JSON array list and assigning it to objectList variable.
   var objectList = tableList; // assign tableList to objectList
 
