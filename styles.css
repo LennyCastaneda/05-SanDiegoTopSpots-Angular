@@ -15,6 +15,16 @@ div.map {
         margin-bottom: 40px;
       }
 
+
+
+/***********************************
+BODY
+***********************************/
+
+.well {
+    background-color: #5bc0de!important;
+}
+
 /***********************************
 TABLE STYLES
 ***********************************/
@@ -36,34 +46,38 @@ table.table {
   width:  auto;
 }
 
+.table-responsive
+{
+    overflow-x: auto;
+}
 
 /***********************************
 MEDIA QUIERIES
 **********************************
 
-/* /* screen width sizes 640px or smaller  */
-/* @media (min-width: 768px)  {
+/* screen width sizes 640px or smaller  */
+@media (min-width: 768px)  {
 
-    div.map-canvas, .container {
-        max-width: 50%, auto;
-        padding: 0%, 0%, 0%, 0%;
-        margin: 0 auto;
-    }
-    td, th, table table-striped table-fixedheader table-bordered  {
-        font-size: .04rem;
-        margin: 0 auto;
-    }
-} */
-/* 
-screen width sizes 1240px or smaller */
+ form.container, .form{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+/* screen width sizes 1240px or smaller */
 @media (min-width: 1240px) {
 
     html, body, div.map-canvas, .container, table.table {
         max-width: 50%, auto;
         padding: 0%, 0%, 0%, 0%;
         margin: 0 auto;
-
     }
+
+    .btn-responsive {
+        padding:4px 9px;
+        font-size:90%;
+        line-height: 1.2;
+  }
 }
 
 

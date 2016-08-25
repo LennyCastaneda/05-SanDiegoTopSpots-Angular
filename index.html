@@ -19,7 +19,7 @@
 	</head>
 
 	<body ng-controller="HomeController" class="container-fluid text-center" >
-		<div class="container-fluid">
+		<div class="well container-fluid">
 			<h1 class="container m-t-2 bg-info lead m-b-2">San Diego Top Spots</h1>
 		</div>
 
@@ -33,9 +33,9 @@
 	    </script>
 
 	<!--  Create a form to add new locations to the topspots array -->
-	<form class="container" >
+	<form class="" >
 		<div class="table">
-			<table class="table table-striped table-fixedheader table-bordered">
+			<table class="table table-responsive table-striped table-fixedheader table-bordered">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -47,7 +47,7 @@
 					<tr ng-repeat="spot in topSpots">
 						<td>{{spot.name}}</td>
 						<td>{{spot.description}}</td>
-						<td><a class="btn btn-success"href="https://maps.google.com/?q={{spot.location[0]}},{{spot.location[1]}}">Go to Google Maps</a></td>
+						<td><a class="btn btn-success btn-responsive" href="https://maps.google.com/?q={{spot.location[0]}},{{spot.location[1]}}">Google Maps</a></td>
 					</tr>
 				</tbody>
 			</table>

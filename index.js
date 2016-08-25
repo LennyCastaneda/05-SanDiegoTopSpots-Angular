@@ -7,8 +7,8 @@ angular.module('app', []);
 //Passing $scope into the function, which is the between the javascript variables and html.
 angular.module('app').controller('HomeController', function($scope, $http) {
 
-    // Move the $http call that retrieves the 'topspots.json' data file into a factory and inject it into your controller.
-    $http.get('topspots.json')
+    // Create the $http call that retrieves the 'topspots.json' data file into a factory and inject it into your controller.
+    $http.get('http://localhost:58865/api/topspots')
         .success(function(topSpotsFromServer) 
         {
             $scope.topSpots = topSpotsFromServer;
